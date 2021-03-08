@@ -92,6 +92,7 @@ var passangerCar = Car(model: "Mitsubishi", yearOfRelease: 2020, trunkVolume: 13
 
 passangerCar.discription()
 print(passangerCar.driveStart())
+passangerCar.discription()
 
 var KamazCar = TrunkCar(model: "Kamaz", yearOfRelease: 2001, trunkVolume: 5000, drive: .Off, windows: .Close, trunkFull: .Empty, trailer: true, trailerFull: .Empty, trailerVolume: 12000)
 
