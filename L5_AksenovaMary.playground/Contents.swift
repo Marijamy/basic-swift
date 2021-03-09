@@ -48,19 +48,21 @@ protocol Car: class {
 
 extension Car{
     func Windows(action: windows) {
-        if action == .open{
-        self.windows = .open
-        }else if action == .close{
-            self.windows = .close
-        }
+        switch action {
+           case .close:
+               self.windows = .close
+           case .open:
+               self.windows = .open
+           }
     }
 }
 
 extension Car{
     func engine(action: engine) {
-        if action == .on{
+        switch action {
+        case .on:
             self.engine = .on
-        }else if action == .off{
+        case .off:
             self.engine = .off
         }
     }
@@ -125,13 +127,14 @@ extension TrunkCar: CustomStringConvertible{
 }
 
 extension TrunkCar{
-func trailer(action: trailer) {
-    if action == .empty{
-        self.trailerFull = .empty
-    }else if action == .full{
-        self.trailerFull = .full
+    func trailer(action: trailer) {
+        switch action{
+        case .empty:
+            self.trailerFull = .empty
+        case .full:
+            self.trailerFull = .full
+        }
     }
-}
 }
 
 var Opel = SportCar(model: "Opel", year: 2020, engineVolume: 6, engine: .off, windows: .close, mileage: 1000)
