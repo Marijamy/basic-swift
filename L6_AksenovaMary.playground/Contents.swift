@@ -14,7 +14,10 @@ struct order<S: Equatable> {
     subscript(index: Int) -> S? {
         if index < pieces.count{
             print(pieces[index])
+<<<<<<< HEAD
             return pieces[index]
+=======
+>>>>>>> e50fbe72588bcfee74925d7f4554104abbfc3384
         }
         return nil
     }
@@ -30,10 +33,13 @@ func findIndexGeneric<T: Equatable>(of valueToFind: T, in array: [T]) -> Int?{
     return nil
 }
 
+<<<<<<< HEAD
 /*var a = order(pieces: [12,3,4,5,6])
 var aaa = a[0]
 print(aaa)*/
 
+=======
+>>>>>>> e50fbe72588bcfee74925d7f4554104abbfc3384
 var material = order<String>()
 
     material.push("cotton")
@@ -48,7 +54,11 @@ var material = order<String>()
 
 var arrayOne = material.pieces
 
+<<<<<<< HEAD
 print(arrayOne[10])
+=======
+print(arrayOne[3])
+>>>>>>> e50fbe72588bcfee74925d7f4554104abbfc3384
 
 var sortedArray = arrayOne.sorted{(s1: String,s2: String) -> Bool in  return s2 > s1}
 print(sortedArray)
